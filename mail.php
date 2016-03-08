@@ -3,7 +3,7 @@
 // =morfiysss=
 
 
-function cmail_now($smtp_mail_config, $mailto, $theme, $mail_text, $header=''){
+function mail_now($smtp_mail_config, $mailto, $theme, $mail_text, $header=''){
 if(!($ret=smtp_mail($smtp_mail_config, $mailto, $theme, $mail_text, $header))) $ret=mail($mailto, $theme, $mail_text, $header);
 return  $ret;
 }
