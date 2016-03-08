@@ -1,7 +1,7 @@
 <?php
 // part of material-design.ru please set a simple link on my site =) <a href="http://material-design.ru">material-design.ru</a>
 // =morfiysss=
-//first usage
+// first usage
 include 'mail.php';
 
 function mail_now($mailto, $theme, $mail_text, $header=''){
