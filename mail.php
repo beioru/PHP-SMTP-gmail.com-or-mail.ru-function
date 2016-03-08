@@ -1,18 +1,10 @@
 <?
-// part of material-design.ru please set a simple link on my site =) <a href="material-design.ru">material-design.ru</a>
-// setup config and use like mail(): mail_now('admin@site','Hello','I send email');
+// part of material-design.ru please set a simple link on my site =) <a href="http://material-design.ru">material-design.ru</a>
 // =morfiysss=
 
-mail_now('admin@site.com','Hello','I send email');
 
-function mail_now($mailo, $theme, $mail_text, $header=''){
-$smtp_mail_config['service_name']  = 'google';//mail/google
-$smtp_mail_config['smtp_username'] = "";  //username
-$smtp_mail_config['smtp_from']     = ''; //Site domen or name
-$smtp_mail_config['smtp_password'] = '';  //password
-$smtp_mail_config['smtp_charset']  = 'utf-8';  //encoding
-
-if(!($ret=smtp_mail($smtp_mail_config, $mailo, $theme, $mail_text, $header))) $ret=mail($mailo, $theme, $mail_text, $header);
+function cmail_now($smtp_mail_config, $mailto, $theme, $mail_text, $header=''){
+if(!($ret=smtp_mail($smtp_mail_config, $mailto, $theme, $mail_text, $header))) $ret=mail($mailto, $theme, $mail_text, $header);
 return  $ret;
 }
 function smtp_mail($smtp_mail_config, $mail_to, $subject, $message, $headers='') {
