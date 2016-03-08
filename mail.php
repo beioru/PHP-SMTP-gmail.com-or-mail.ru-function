@@ -24,13 +24,13 @@ function smtp_mail($smtp_mail_config, $mail_to, $subject, $message, $headers='')
     }
     $SEND .=  $message."\r\n";
     switch ($smtp_mail_config['service_name']) {
-        case 'mail':
+        case 'mail.ru':
             $service['smtp_host']='tls://smtp.mail.ru';
             $service['smtp_port']='465';
             $service['hello']='EHLO mail';
 
         break;
-        case 'google':
+        case 'gmail.com':
             $service['smtp_host']='ssl://smtp.gmail.com';
             $service['smtp_port']='465';
             $service['hello']='HELO google';
