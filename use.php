@@ -2,7 +2,7 @@
 // Part of material-design.ru please set a simple link on my site =) <a href="http://material-design.ru">material-design.ru</a>
 // =morfiysss=
 // First usage
-include 'mail.php';
+include 'amail.php';
 
 function amail($mailto, $theme, $mail_text, $header=''){
   $smtp_mail_config['service_name']  = 'gmail.com'; //mail.ru or gmail.com
